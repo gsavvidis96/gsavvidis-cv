@@ -1,9 +1,7 @@
 <template>
-  <v-app>
+  <v-app id="gsavvidis">
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
   </v-app>
 </template>

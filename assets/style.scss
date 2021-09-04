@@ -1,3 +1,18 @@
-h1 {
-    font-family: "IBM Plex Mono", monospace !important;
+#gsavvidis.v-application {
+    *:not(.v-icon),
+    *:not(.v-icon):before,
+    *:not(.v-icon):after {
+        font-family: "IBM Plex Mono", monospace !important;
+        letter-spacing: normal !important;
+        text-transform: none !important;
+    }
+}
+
+.v-main__wrap {
+    display: flex;
+}
+
+.component-wrapper {
+    flex-grow: 1;
+    position: relative;
 }
