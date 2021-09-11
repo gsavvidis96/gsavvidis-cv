@@ -1,5 +1,5 @@
 <template>
-  <div class="component-wrapper d-flex justify-center pb-10 pt-5">
+  <div class="component-wrapper d-flex justify-center py-5">
     <div class="wrapper d-flex flex-column">
       <!-- ====== DARK MODE BTN ====== -->
       <v-btn
@@ -10,71 +10,84 @@
         <v-icon>mdi-weather-night</v-icon>
       </v-btn>
 
-      <div class="d-flex">
+      <div class="d-flex flex-column flex-md-row">
         <!-- ====== INFO CARD ====== -->
-        <div class="profile align-self-start elevation-2 rounded mr-10">
-          <div class="pa-5">
+        <div
+          class="
+            profile
+            align-self-md-start
+            elevation-2
+            rounded
+            mb-10 mb-md-0
+            mr-md-10
+          "
+        >
+          <div class="pa-5 text-center text-md-start">
             <div class="text-h6 font-weight-bold">Giannis Savvidis</div>
             <div class="body-1">Javascript Developer</div>
           </div>
 
-          <div class="img grey"></div>
+          <div class="profile-inner-wrapper flex-md-column">
+            <div class="img grey align-self-center align-self-md-stretch"></div>
 
-          <div class="pa-5">
-            <div class="d-flex align-center mb-3">
-              <div class="body-2 font-weight-bold mr-2">Age:</div>
-              <div class="body-2">{{ currentYear - 1996 }}</div>
+            <div class="pa-5 d-flex justify-center justify-md-start">
+              <div class="d-flex flex-column">
+                <div class="d-flex align-center mb-3">
+                  <div class="body-2 font-weight-bold mr-2">Age:</div>
+                  <div class="body-2">{{ currentYear - 1996 }}</div>
+                </div>
+
+                <div class="d-flex align-center mb-3">
+                  <div class="body-2 font-weight-bold mr-2">Residence:</div>
+                  <div class="body-2">Athens, Greece</div>
+                </div>
+
+                <div class="d-flex align-center mb-3">
+                  <div class="body-2 font-weight-bold mr-2">Nationality:</div>
+                  <div class="body-2">Greek</div>
+                </div>
+
+                <div class="d-flex align-center mb-3">
+                  <div class="body-2 font-weight-bold mr-2">Mobile:</div>
+                  <div class="body-2">+30 6977456192</div>
+                </div>
+
+                <div class="d-flex align-center mb-3">
+                  <div class="body-2 font-weight-bold mr-2">Email:</div>
+                  <div class="body-2">savvigiannhs@gmail.com</div>
+                </div>
+
+                <div class="d-flex align-center mb-3">
+                  <div class="body-2 font-weight-bold mr-2">Skype:</div>
+                  <div class="body-2">savvi_afanas</div>
+                </div>
+
+                <div class="d-flex align-center mb-3">
+                  <div class="body-2 font-weight-bold mr-2">LinkedIn:</div>
+                  <a
+                    class="body-2 dotted"
+                    href="https://www.linkedin.com/in/giannis-savvidis-22340a188/"
+                    target="_blank"
+                    >https://www.linkedin.com/in/giannis-savvidis-22340a188/</a
+                  >
+                </div>
+
+                <div class="d-flex align-center mb-5">
+                  <div class="body-2 font-weight-bold mr-2">Github:</div>
+                  <a
+                    class="body-2 dotted"
+                    href="https://github.com/savgiannis"
+                    target="_blank"
+                    >https://github.com/savgiannis</a
+                  >
+                </div>
+
+                <v-btn depressed>
+                  <v-icon left>mdi-cloud-download-outline</v-icon>
+                  Download CV</v-btn
+                >
+              </div>
             </div>
-
-            <div class="d-flex align-center mb-3">
-              <div class="body-2 font-weight-bold mr-2">Residence:</div>
-              <div class="body-2">Athens, Greece</div>
-            </div>
-
-            <div class="d-flex align-center mb-3">
-              <div class="body-2 font-weight-bold mr-2">Nationality:</div>
-              <div class="body-2">Greek</div>
-            </div>
-
-            <div class="d-flex align-center mb-3">
-              <div class="body-2 font-weight-bold mr-2">Mobile:</div>
-              <div class="body-2">+30 6977456192</div>
-            </div>
-
-            <div class="d-flex align-center mb-3">
-              <div class="body-2 font-weight-bold mr-2">Email:</div>
-              <div class="body-2">savvigiannhs@gmail.com</div>
-            </div>
-
-            <div class="d-flex align-center mb-3">
-              <div class="body-2 font-weight-bold mr-2">Skype:</div>
-              <div class="body-2">savvi_afanas</div>
-            </div>
-
-            <div class="d-flex align-center mb-3">
-              <div class="body-2 font-weight-bold mr-2">LinkedIn:</div>
-              <a
-                class="body-2 dotted"
-                href="https://www.linkedin.com/in/giannis-savvidis-22340a188/"
-                target="_blank"
-                >https://www.linkedin.com/in/giannis-savvidis-22340a188/</a
-              >
-            </div>
-
-            <div class="d-flex align-center mb-5">
-              <div class="body-2 font-weight-bold mr-2">Github:</div>
-              <a
-                class="body-2 dotted"
-                href="https://github.com/savgiannis"
-                target="_blank"
-                >https://github.com/savgiannis</a
-              >
-            </div>
-
-            <v-btn depressed>
-              <v-icon left>mdi-cloud-download-outline</v-icon>
-              Download CV</v-btn
-            >
           </div>
         </div>
 
@@ -121,7 +134,7 @@
               <li class="mb-2">
                 <a href="https://codefactory.gr/" target="_blank">CodeFactory</a
                 >, June 2019 - Present
-                <span class="body-2">(2 Years, 2 Months)</span>
+                <span class="body-2">({{ timeInCf }})</span>
               </li>
             </ul>
 
@@ -259,17 +272,7 @@ export default {
           isWhite: true,
         },
         {
-          name: 'Firebase push notifications',
-          color: '#ffca28',
-          isWhite: false,
-        },
-        {
-          name: 'Firebase hosting',
-          color: '#ffca28',
-          isWhite: false,
-        },
-        {
-          name: 'Firebase cloud firestore',
+          name: 'Firebase',
           color: '#ffca28',
           isWhite: false,
         },
@@ -283,11 +286,25 @@ export default {
           color: '#635bff',
           isWhite: true,
         },
+        {
+          name: 'Paypal',
+          color: '#222d65',
+          isWhite: true,
+        },
       ],
     }
   },
-  created() {
-    console.log('xaxa', this.$vuetify.theme.dark)
+  computed: {
+    timeInCf() {
+      const dateStarted = new Date(2019, 5, 1)
+      const today = new Date()
+
+      const years = today.getFullYear() - dateStarted.getFullYear()
+
+      const months = today.getMonth() - dateStarted.getMonth()
+
+      return `${years} Years${months ? ', ' + months + ' Months' : ''}`
+    },
   },
   methods: {
     toggleDarkMode() {
@@ -301,18 +318,43 @@ export default {
 .wrapper {
   max-width: 1185px;
 
-  @media only screen and (max-width: 959px) {
+  @media only screen and (max-width: 1225px) {
     max-width: 900px;
   }
 
-  @media only screen and (max-width: 599px) {
+  @media only screen and (max-width: 960px) {
     width: 100%;
+    padding: 0 20px;
   }
 }
 
 .profile {
+  .profile-inner-wrapper {
+    display: flex;
+
+    @media only screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+
   .img {
     height: 200px;
+
+    @media only screen and (max-width: 960px) {
+      height: 340px;
+      width: 340px;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    @media only screen and (max-width: 700px) {
+      border-radius: 4px;
+    }
+
+    @media only screen and (max-width: 500px) {
+      width: 100%;
+      height: 300px;
+    }
   }
 
   .dotted {
@@ -320,6 +362,10 @@ export default {
     white-space: nowrap;
     overflow: hidden;
     width: 180px;
+
+    @media only screen and (max-width: 380px) {
+      width: 150px;
+    }
   }
 }
 </style>
