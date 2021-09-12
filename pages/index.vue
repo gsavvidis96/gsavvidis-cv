@@ -54,12 +54,7 @@
 
                 <div class="d-flex align-center mb-3">
                   <div class="body-2 font-weight-bold mr-2">Email:</div>
-                  <div class="body-2">savvigiannhs@gmail.com</div>
-                </div>
-
-                <div class="d-flex align-center mb-3">
-                  <div class="body-2 font-weight-bold mr-2">Skype:</div>
-                  <div class="body-2">savvi_afanas</div>
+                  <div class="body-2">gsavvidis96@gmail.com</div>
                 </div>
 
                 <div class="d-flex align-center mb-3">
@@ -76,9 +71,9 @@
                   <div class="body-2 font-weight-bold mr-2">Github:</div>
                   <a
                     class="body-2 dotted"
-                    href="https://github.com/savgiannis"
+                    href="https://github.com/gsavvidis96"
                     target="_blank"
-                    >https://github.com/savgiannis</a
+                    >https://github.com/gsavvidis96</a
                   >
                 </div>
 
@@ -97,12 +92,10 @@
             <div class="text-h6 mb-5">About me</div>
 
             <div class="body-1 mb-10">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias,
-              ipsum magni voluptas ducimus fuga eligendi nemo iusto deserunt
-              accusamus. Provident hic sed repellat nam amet laborum sit culpa
-              cupiditate, tempora velit mollitia quos, soluta illo error ad
-              corporis? Totam id repellendus debitis odio blanditiis. Nisi, non.
-              Officiis maxime incidunt delectus.
+              Hi! I am Giannis, a web developer based in Athens, Greece. I love
+              Javascript and always try to keep up with the fast-growing
+              industry of web development, following the best practices and
+              patterns. I look forward to working with you.
             </div>
 
             <div class="text-h6 mb-5">Education</div>
@@ -221,8 +214,8 @@ export default {
         },
         {
           name: 'Nuxt',
-          color: '#00dc82',
-          isWhite: false,
+          color: '#00c58e',
+          isWhite: true,
         },
         {
           name: 'Strapi CMS',
@@ -230,14 +223,14 @@ export default {
           isWhite: true,
         },
         {
-          name: 'Node.js',
+          name: 'Node',
           color: '#3c873a',
           isWhite: true,
         },
         {
           name: 'Express',
           color: '#aeaeae',
-          isWhite: false,
+          isWhite: true,
         },
         {
           name: 'MySQL',
