@@ -4,10 +4,12 @@
       <!-- ====== DARK MODE BTN ====== -->
       <v-btn
         icon
-        class="mb-5 align-self-end grey darken-4 white--text"
+        class="mb-5 align-self-end accent white--text"
         @click="toggleDarkMode"
       >
-        <v-icon>mdi-weather-night</v-icon>
+        <v-icon color="accentTextColor">{{
+          isDarkMode ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
+        }}</v-icon>
       </v-btn>
 
       <div class="d-flex flex-column flex-md-row">
@@ -20,6 +22,7 @@
             rounded
             mb-10 mb-md-0
             mr-md-10
+            background
           "
         >
           <div class="pa-5 text-center text-md-start">
@@ -77,7 +80,7 @@
                   >
                 </div>
 
-                <v-btn depressed>
+                <v-btn depressed color="accent" class="accentTextColor--text">
                   <v-icon left>mdi-cloud-download-outline</v-icon>
                   Download CV</v-btn
                 >
@@ -88,7 +91,7 @@
 
         <!-- ====== CV CARD ====== -->
         <div class="d-flex flex-column flex-grow-1">
-          <div class="elevation-2 rounded mb-10 pa-5">
+          <div class="elevation-2 background rounded mb-10 pa-5">
             <div class="text-h6 mb-5">About me</div>
 
             <div class="body-1 mb-10">
@@ -171,16 +174,14 @@
           <!-- ====== FOOTER ====== -->
           <div
             class="
-              grey
-              darken-4
               rounded
               pa-3
-              grey--text
-              text--lighten-5
               footer
               d-flex
               flex-column
               align-center
+              accent
+              accentTextColor--text
             "
           >
             <div class="caption">Giannis Savvidis &copy; {{ currentYear }}</div>
@@ -297,6 +298,9 @@ export default {
       const months = today.getMonth() - dateStarted.getMonth()
 
       return `${years} Years${months ? ', ' + months + ' Months' : ''}`
+    },
+    isDarkMode() {
+      return this.$vuetify.theme.dark
     },
   },
   methods: {
