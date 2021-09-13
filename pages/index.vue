@@ -142,7 +142,10 @@
                 :key="skill.name"
                 class="ma-2"
                 :color="skill.color"
-                :class="{ 'white--text': skill.isWhite }"
+                :class="{
+                  'white--text': skill.isWhite,
+                  'black--text': !skill.isWhite,
+                }"
                 >{{ skill.name }}</v-chip
               >
             </div>
@@ -155,7 +158,10 @@
                 :key="technology.name"
                 class="ma-2"
                 :color="technology.color"
-                :class="{ 'white--text': technology.isWhite }"
+                :class="{
+                  'white--text': technology.isWhite,
+                  'black--text': !technology.isWhite,
+                }"
                 >{{ technology.name }}</v-chip
               >
             </div>
