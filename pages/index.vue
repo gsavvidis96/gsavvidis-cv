@@ -55,12 +55,12 @@
                   <div class="body-2">+30 6977456192</div>
                 </div>
 
-                <div class="d-flex align-center mb-3">
+                <div class="d-flex align-center mb-6">
                   <div class="body-2 font-weight-bold mr-2">Email:</div>
                   <div class="body-2">gsavvidis96@gmail.com</div>
                 </div>
 
-                <div class="d-flex align-center mb-3">
+                <!-- <div class="d-flex align-center mb-6">
                   <div class="body-2 font-weight-bold mr-2">LinkedIn:</div>
                   <a
                     class="body-2 dotted"
@@ -68,9 +68,9 @@
                     target="_blank"
                     >https://www.linkedin.com/in/giannis-savvidis-22340a188/</a
                   >
-                </div>
+                </div> -->
 
-                <div class="d-flex align-center mb-5">
+                <!-- <div class="d-flex align-center mb-5">
                   <div class="body-2 font-weight-bold mr-2">Github:</div>
                   <a
                     class="body-2 dotted"
@@ -78,7 +78,18 @@
                     target="_blank"
                     >https://github.com/gsavvidis96</a
                   >
-                </div>
+                </div> -->
+
+                <v-btn
+                  depressed
+                  color="accent"
+                  class="accentTextColor--text mb-3"
+                  href="https://www.linkedin.com/in/giannis-savvidis-22340a188/"
+                  target="_blank"
+                >
+                  <v-icon left> mdi-linkedin</v-icon>
+                  LinkedIn</v-btn
+                >
 
                 <v-btn depressed color="accent" class="accentTextColor--text">
                   <v-icon left>mdi-cloud-download-outline</v-icon>
@@ -95,10 +106,10 @@
             <div class="text-h6 mb-5">About me</div>
 
             <div class="body-1 mb-10">
-              Hi! I am Giannis, a web developer based in Athens, Greece. I love
+              I am Giannis, a web developer based in Athens, Greece. I love
               Javascript and always try to keep up with the fast-growing
               industry of web development, following the best practices and
-              patterns. I look forward to working with you.
+              patterns.
             </div>
 
             <div class="text-h6 mb-5">Education</div>
@@ -108,7 +119,7 @@
                 <a
                   href="https://michiganassessment.org/michigan-tests/ecpe-details/"
                   target="_blank"
-                  >Certificate of Proficiency (ECPE)</a
+                  >Certificate of Proficiency in English (ECPE)</a
                 >,
                 <span class="font-weight-medium">University of Michigan</span>
               </li>
@@ -173,7 +184,7 @@
 
               <li class="mb-2">Fitness</li>
 
-              <li class="mb-2">Watching/Playing football (european)</li>
+              <!-- <li class="mb-2">Watching/Playing football (european)</li> -->
             </ul>
           </div>
 
@@ -225,11 +236,6 @@ export default {
           isWhite: true,
         },
         {
-          name: 'Strapi CMS',
-          color: '#8e75ff',
-          isWhite: true,
-        },
-        {
           name: 'Node',
           color: '#3c873a',
           isWhite: true,
@@ -262,6 +268,11 @@ export default {
           isWhite: true,
         },
         {
+          name: 'Strapi CMS',
+          color: '#8e75ff',
+          isWhite: true,
+        },
+        {
           name: 'Sequelize ORM',
           color: '#237bbb',
           isWhite: true,
@@ -281,16 +292,16 @@ export default {
           color: '#f22f46',
           isWhite: true,
         },
-        {
-          name: 'Stripe payments',
-          color: '#635bff',
-          isWhite: true,
-        },
-        {
-          name: 'Paypal',
-          color: '#222d65',
-          isWhite: true,
-        },
+        // {
+        //   name: 'Stripe payments',
+        //   color: '#635bff',
+        //   isWhite: true,
+        // },
+        // {
+        //   name: 'Paypal',
+        //   color: '#222d65',
+        //   isWhite: true,
+        // },
       ],
     }
   },
