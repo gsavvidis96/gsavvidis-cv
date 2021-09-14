@@ -30,72 +30,50 @@
             <div class="body-1">Javascript Developer</div>
           </div>
 
-          <div class="profile-inner-wrapper flex-md-column">
-            <div class="img grey align-self-center align-self-md-stretch"></div>
+          <v-divider></v-divider>
 
-            <div class="pa-5 d-flex justify-center justify-md-start">
-              <div class="d-flex flex-column">
-                <div class="d-flex align-center mb-3">
-                  <div class="body-2 font-weight-bold mr-2">Age:</div>
-                  <div class="body-2">{{ currentYear - 1996 }}</div>
-                </div>
-
-                <div class="d-flex align-center mb-3">
-                  <div class="body-2 font-weight-bold mr-2">Residence:</div>
-                  <div class="body-2">Athens, Greece</div>
-                </div>
-
-                <div class="d-flex align-center mb-3">
-                  <div class="body-2 font-weight-bold mr-2">Nationality:</div>
-                  <div class="body-2">Greek</div>
-                </div>
-
-                <div class="d-flex align-center mb-3">
-                  <div class="body-2 font-weight-bold mr-2">Mobile:</div>
-                  <div class="body-2">+30 6977456192</div>
-                </div>
-
-                <div class="d-flex align-center mb-6">
-                  <div class="body-2 font-weight-bold mr-2">Email:</div>
-                  <div class="body-2">gsavvidis96@gmail.com</div>
-                </div>
-
-                <!-- <div class="d-flex align-center mb-6">
-                  <div class="body-2 font-weight-bold mr-2">LinkedIn:</div>
-                  <a
-                    class="body-2 dotted"
-                    href="https://www.linkedin.com/in/giannis-savvidis-22340a188/"
-                    target="_blank"
-                    >https://www.linkedin.com/in/giannis-savvidis-22340a188/</a
-                  >
-                </div> -->
-
-                <!-- <div class="d-flex align-center mb-5">
-                  <div class="body-2 font-weight-bold mr-2">Github:</div>
-                  <a
-                    class="body-2 dotted"
-                    href="https://github.com/gsavvidis96"
-                    target="_blank"
-                    >https://github.com/gsavvidis96</a
-                  >
-                </div> -->
-
-                <v-btn
-                  depressed
-                  color="accent"
-                  class="accentTextColor--text mb-3"
-                  href="https://www.linkedin.com/in/giannis-savvidis-22340a188/"
-                  target="_blank"
-                >
-                  <v-icon left> mdi-linkedin</v-icon>
-                  LinkedIn</v-btn
-                >
-
-                <v-btn depressed color="accent" class="accentTextColor--text">
-                  <v-icon left>mdi-cloud-download-outline</v-icon>
-                  Download CV</v-btn
-                >
+          <div class="pa-5 d-flex justify-center justify-md-start">
+            <div class="d-flex flex-column">
+              <div class="d-flex align-center mb-3">
+                <div class="body-2 font-weight-bold mr-2">Age:</div>
+                <div class="body-2">{{ currentYear - 1996 }}</div>
               </div>
+
+              <div class="d-flex align-center mb-3">
+                <div class="body-2 font-weight-bold mr-2">Residence:</div>
+                <div class="body-2">Athens, Greece</div>
+              </div>
+
+              <div class="d-flex align-center mb-3">
+                <div class="body-2 font-weight-bold mr-2">Nationality:</div>
+                <div class="body-2">Greek</div>
+              </div>
+
+              <div class="d-flex align-center mb-3">
+                <div class="body-2 font-weight-bold mr-2">Mobile:</div>
+                <div class="body-2">+30 6977456192</div>
+              </div>
+
+              <div class="d-flex align-center mb-6">
+                <div class="body-2 font-weight-bold mr-2">Email:</div>
+                <div class="body-2">gsavvidis96@gmail.com</div>
+              </div>
+
+              <v-btn
+                depressed
+                color="accent"
+                class="accentTextColor--text mb-3"
+                href="https://www.linkedin.com/in/giannis-savvidis-22340a188/"
+                target="_blank"
+              >
+                <v-icon left> mdi-linkedin</v-icon>
+                LinkedIn</v-btn
+              >
+
+              <v-btn depressed color="accent" class="accentTextColor--text">
+                <v-icon left>mdi-cloud-download-outline</v-icon>
+                Download CV</v-btn
+              >
             </div>
           </div>
         </div>
@@ -183,8 +161,6 @@
               <li class="mb-2">Guitar</li>
 
               <li class="mb-2">Fitness</li>
-
-              <!-- <li class="mb-2">Watching/Playing football (european)</li> -->
             </ul>
           </div>
 
@@ -339,47 +315,6 @@ export default {
   @media only screen and (max-width: 960px) {
     width: 100%;
     padding: 0 20px;
-  }
-}
-
-.profile {
-  .profile-inner-wrapper {
-    display: flex;
-
-    @media only screen and (max-width: 700px) {
-      flex-direction: column;
-    }
-  }
-
-  .img {
-    height: 200px;
-
-    @media only screen and (max-width: 960px) {
-      height: 340px;
-      width: 340px;
-      border-bottom-left-radius: 4px;
-      border-top-right-radius: 4px;
-    }
-
-    @media only screen and (max-width: 700px) {
-      border-radius: 4px;
-    }
-
-    @media only screen and (max-width: 500px) {
-      width: 100%;
-      height: 300px;
-    }
-  }
-
-  .dotted {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 180px;
-
-    @media only screen and (max-width: 380px) {
-      width: 150px;
-    }
   }
 }
 </style>
