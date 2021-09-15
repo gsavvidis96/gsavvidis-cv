@@ -127,7 +127,7 @@
                 <a href="https://codefactory.gr/" target="_blank">CodeFactory</a
                 >, June 2019 - Present
                 <span class="body-2">({{ timeInCf }})</span>,
-                <span class="font-weight-bold">Job Description: </span>
+                <span class="font-weight-medium">Job Description: </span>
                 Front-end developer with Vue.js, also creating small back-end
                 applications with Node.js and Express.js.
               </li>
@@ -171,6 +171,8 @@
               <li class="mb-2">Guitar</li>
 
               <li class="mb-2">Fitness</li>
+
+              <li class="mb-2">Watching/playing football</li>
             </ul>
           </div>
 
@@ -306,9 +308,36 @@ export default {
       return this.$vuetify.theme.dark
     },
   },
+  beforeMount() {
+    const isDarkMode = localStorage.getItem('isDarkMode')
+
+    if (isDarkMode == null) {
+      //if never toggled
+      if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        //if system is dark mode
+        this.setDarkMode(true)
+      }
+    } else {
+      //if toggled before
+      if (isDarkMode === 'true') {
+        this.setDarkMode(true)
+      } else {
+        this.setDarkMode(false)
+      }
+    }
+  },
   methods: {
     toggleDarkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+      localStorage.setItem('isDarkMode', this.$vuetify.theme.dark.toString())
+    },
+    setDarkMode(isDarkMode) {
+      setTimeout(() => {
+        this.$vuetify.theme.dark = isDarkMode
+      }, 1)
     },
   },
 }

@@ -17,6 +17,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "no-console": "off"
+    "no-console": "off",
+    "spaced-comment": "off",
+    "no-lonely-if": "off"
   }
 }
