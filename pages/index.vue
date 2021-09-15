@@ -308,36 +308,9 @@ export default {
       return this.$vuetify.theme.dark
     },
   },
-  beforeMount() {
-    const isDarkMode = localStorage.getItem('isDarkMode')
-
-    if (isDarkMode == null) {
-      //if never toggled
-      if (
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      ) {
-        //if system is dark mode
-        this.setDarkMode(true)
-      }
-    } else {
-      //if toggled before
-      if (isDarkMode === 'true') {
-        this.setDarkMode(true)
-      } else {
-        this.setDarkMode(false)
-      }
-    }
-  },
   methods: {
     toggleDarkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
-      localStorage.setItem('isDarkMode', this.$vuetify.theme.dark.toString())
-    },
-    setDarkMode(isDarkMode) {
-      setTimeout(() => {
-        this.$vuetify.theme.dark = isDarkMode
-      }, 1)
     },
   },
 }
