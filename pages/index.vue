@@ -26,7 +26,8 @@
           "
         >
           <div class="pa-5 text-center text-md-start">
-            <div class="text-h6 font-weight-bold">Giannis Savvidis</div>
+            <div class="text-h5 mb-1 font-weight-bold">Giannis Savvidis</div>
+
             <div class="body-1">Javascript Developer</div>
           </div>
 
@@ -70,7 +71,13 @@
                 LinkedIn</v-btn
               >
 
-              <v-btn depressed color="accent" class="accentTextColor--text">
+              <v-btn
+                depressed
+                color="accent"
+                class="accentTextColor--text"
+                href="https://firebasestorage.googleapis.com/v0/b/gsavvidis-d189f.appspot.com/o/cv.pdf?alt=media"
+                target="_blank"
+              >
                 <v-icon left>mdi-cloud-download-outline</v-icon>
                 Download CV</v-btn
               >
@@ -85,7 +92,7 @@
 
             <div class="body-1 mb-10">
               I am Giannis, a web developer based in Athens, Greece. I love
-              Javascript and always try to keep up with the fast-growing
+              JavaScript and always try to keep up with the fast-growing
               industry of web development, following the best practices and
               patterns.
             </div>
@@ -119,7 +126,10 @@
               <li class="mb-2">
                 <a href="https://codefactory.gr/" target="_blank">CodeFactory</a
                 >, June 2019 - Present
-                <span class="body-2">({{ timeInCf }})</span>
+                <span class="body-2">({{ timeInCf }})</span>,
+                <span class="font-weight-bold">Job Description: </span>
+                Front-end developer with Vue.js, also creating small back-end
+                applications with Node.js and Express.js.
               </li>
             </ul>
 
