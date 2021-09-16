@@ -127,9 +127,15 @@
                 <a href="https://codefactory.gr/" target="_blank">CodeFactory</a
                 >, June 2019 - Present
                 <span class="body-2">({{ timeInCf }})</span>,
-                <span class="font-weight-medium">Job Description: </span>
-                Front-end developer with Vue.js, also creating small back-end
-                applications with Node.js and Express.js.
+                <div class="body-1 pt-2">
+                  As a front-end developer I was creating interfaces with Vue.js
+                  following the best practices and using modern features like
+                  push notifications and WebRTC. Converted web applications into
+                  hybrid mobile applications using Capacitor.js and published to
+                  both Google Play Store and Apple App Store. I consumed a
+                  variety of RESTful APIs as well as implemented some with
+                  Node.js and Express.js.
+                </div>
               </li>
             </ul>
 
