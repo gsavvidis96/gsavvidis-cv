@@ -129,12 +129,12 @@
                 <span class="body-2">({{ timeInCf }})</span>
                 <div class="body-1 pt-2">
                   As a front-end developer I was creating interfaces with Vue.js
-                  following the best practices and using modern features like
-                  push notifications and WebRTC. Converted web applications into
-                  hybrid mobile applications using Capacitor.js and published to
-                  both Google Play Store and Apple App Store. I consumed a
-                  variety of RESTful APIs as well as implemented some with
-                  Node.js and Express.js.
+                  following the best practices. Used modern features like push
+                  notifications, WebRTC and more. Converted web applications
+                  into hybrid mobile applications using Capacitor.js and
+                  published to both Google Play Store and Apple App Store. I
+                  consumed a variety of RESTful APIs as well as implemented some
+                  with Node.js and Express.js.
                 </div>
               </li>
             </ul>
