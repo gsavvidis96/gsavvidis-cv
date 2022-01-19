@@ -45,7 +45,14 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/dayjs'
   ],
+
+  dayjs: {
+    plugins: [
+      'utc', // import 'dayjs/plugin/utc'
+    ] // Your Day.js plugin
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
