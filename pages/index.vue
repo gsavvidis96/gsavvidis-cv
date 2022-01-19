@@ -28,7 +28,7 @@
           <div class="pa-5 text-center text-md-start">
             <div class="text-h5 mb-1 font-weight-bold">Giannis Savvidis</div>
 
-            <div class="body-1">Javascript Developer</div>
+            <div class="body-1">Web Developer</div>
           </div>
 
           <v-divider></v-divider>
@@ -126,7 +126,7 @@
               <li class="mb-2">
                 <a href="https://codefactory.gr/" target="_blank">CodeFactory</a
                 >, June 2019 - Present
-                <span class="body-2">({{ timeInCf }})</span>,
+                <span class="body-2">({{ timeInCf }})</span>
                 <div class="body-1 pt-2">
                   As a front-end developer I was creating interfaces with Vue.js
                   following the best practices and using modern features like
@@ -262,11 +262,6 @@ export default {
           isWhite: true,
         },
         {
-          name: 'Strapi CMS',
-          color: '#8e75ff',
-          isWhite: true,
-        },
-        {
           name: 'Sequelize ORM',
           color: '#237bbb',
           isWhite: true,
@@ -301,12 +296,15 @@ export default {
   },
   computed: {
     timeInCf() {
-      const dateStarted = new Date(2019, 5, 1)
-      const today = new Date()
+      const dateStarted = this.$dayjs(new Date(2019, 5, 1))
 
-      const years = today.getFullYear() - dateStarted.getFullYear()
+      const today = this.$dayjs()
 
-      const months = today.getMonth() - dateStarted.getMonth()
+      const diff = today.diff(dateStarted, 'months')
+
+      const years = Math.trunc(diff / 12)
+
+      const months = diff % 12
 
       return `${years} Years${months ? ', ' + months + ' Months' : ''}`
     },
