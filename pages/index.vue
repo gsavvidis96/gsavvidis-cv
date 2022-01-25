@@ -78,7 +78,7 @@
         <!-- ====== CV CARD ====== -->
         <div class="d-flex flex-column flex-grow-1">
           <div class="elevation-2 background rounded mb-10 pa-5">
-            <div class="text-h6 mb-5">About me</div>
+            <div class="text-h6 mb-5">Summary</div>
 
             <div class="body-1 mb-10">
               I am Giannis, a web developer based in Athens, Greece. I love
