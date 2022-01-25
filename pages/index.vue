@@ -65,8 +65,8 @@
                 depressed
                 color="accent"
                 class="accentTextColor--text"
-                href="https://firebasestorage.googleapis.com/v0/b/gsavvidis-d189f.appspot.com/o/cv.pdf?alt=media"
-                target="_blank"
+                href="cv.pdf"
+                download
               >
                 <v-icon left>mdi-cloud-download-outline</v-icon>
                 Download CV</v-btn
