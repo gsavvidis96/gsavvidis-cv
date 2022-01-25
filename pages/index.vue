@@ -41,18 +41,8 @@
               </div>
 
               <div class="d-flex align-center mb-3">
-                <div class="body-2 font-weight-bold mr-2">Residence:</div>
+                <div class="body-2 font-weight-bold mr-2">Location:</div>
                 <div class="body-2">Athens, Greece</div>
-              </div>
-
-              <div class="d-flex align-center mb-3">
-                <div class="body-2 font-weight-bold mr-2">Nationality:</div>
-                <div class="body-2">Greek</div>
-              </div>
-
-              <div class="d-flex align-center mb-3">
-                <div class="body-2 font-weight-bold mr-2">Mobile:</div>
-                <div class="body-2">+30 6977456192</div>
               </div>
 
               <div class="d-flex align-center mb-6">
@@ -97,29 +87,6 @@
               patterns.
             </div>
 
-            <div class="text-h6 mb-5">Education</div>
-
-            <ul class="body-1 mb-10">
-              <li class="mb-2">
-                <a
-                  href="https://michiganassessment.org/michigan-tests/ecpe-details/"
-                  target="_blank"
-                  >Certificate of Proficiency in English (ECPE)</a
-                >,
-                <span class="font-weight-medium">University of Michigan</span>
-              </li>
-
-              <li>
-                <a href="http://www.ice.uniwa.gr/en/home/" target="_blank"
-                  >Department of Informatics and Computer Engineering</a
-                >,
-                <span class="font-weight-medium"
-                  >University of West Attica</span
-                >
-                (Undergraduate)
-              </li>
-            </ul>
-
             <div class="text-h6 mb-5">Employment</div>
 
             <ul class="body-1 mb-10">
@@ -136,6 +103,27 @@
                   consumed a variety of RESTful APIs as well as implemented some
                   with Node.js and Express.js.
                 </div>
+              </li>
+            </ul>
+
+            <div class="text-h6 mb-5">Education</div>
+
+            <ul class="body-1 mb-10">
+              <li class="mb-2">
+                <a
+                  href="https://michiganassessment.org/michigan-tests/ecpe-details/"
+                  target="_blank"
+                  >Certificate of Proficiency in English (ECPE)</a
+                >,
+                <span class="font-weight-medium">University of Michigan</span>
+              </li>
+
+              <li>
+                <a href="http://www.ice.uniwa.gr/en/home/" target="_blank"
+                  >Department of Informatics and Computer Engineering</a
+                >,
+                <span class="font-weight-medium">University of West Attica</span
+                >, (2014)
               </li>
             </ul>
 
@@ -215,7 +203,7 @@ export default {
           isWhite: false,
         },
         {
-          name: 'Vue',
+          name: 'Vue.js',
           color: '#42b883',
           isWhite: true,
         },
@@ -225,29 +213,29 @@ export default {
           isWhite: true,
         },
         {
-          name: 'Nuxt',
+          name: 'Nuxt.js',
           color: '#00c58e',
           isWhite: true,
         },
         {
-          name: 'Node',
+          name: 'Node.js',
           color: '#3c873a',
           isWhite: true,
         },
         {
-          name: 'Express',
+          name: 'Express.js',
           color: '#aeaeae',
           isWhite: true,
         },
         {
-          name: 'MySQL',
+          name: 'MySQL/PostgreSQL',
           color: '#f29111',
           isWhite: true,
         },
       ],
       technologies: [
         {
-          name: 'Vuetify',
+          name: 'Vuetify.js',
           color: '#1697f6',
           isWhite: true,
         },
@@ -277,7 +265,7 @@ export default {
           isWhite: false,
         },
         {
-          name: 'Twilio video',
+          name: 'Twilio video js',
           color: '#f22f46',
           isWhite: true,
         },
