@@ -28,7 +28,7 @@
           <div class="pa-5 text-center text-md-start">
             <div class="text-h5 mb-1 font-weight-bold">Giannis Savvidis</div>
 
-            <div class="body-1">Web Developer</div>
+            <div class="body-1">Software engineer</div>
           </div>
 
           <v-divider></v-divider>
@@ -47,8 +47,21 @@
 
               <div class="d-flex align-center mb-6">
                 <div class="body-2 font-weight-bold mr-2">Email:</div>
-                <div class="body-2">gsavvidis96@gmail.com</div>
+                <div class="body-2">
+                  <a href="mailto:someone@example.com">gsavvidis96@gmail.com</a>
+                </div>
               </div>
+
+              <v-btn
+                depressed
+                color="accent"
+                class="accentTextColor--text mb-3"
+                href="https://github.com/gsavvidis96"
+                target="_blank"
+              >
+                <v-icon left> mdi-github</v-icon>
+                Github</v-btn
+              >
 
               <v-btn
                 depressed
@@ -80,52 +93,14 @@
           <div class="elevation-2 background rounded mb-10 pa-5">
             <div class="text-h6 mb-5">Summary</div>
 
-            <div class="body-1 mb-10">
-              I am Giannis, a web developer based in Athens, Greece. I love
-              JavaScript and always try to keep up with the fast-growing
-              industry of web development, following the best practices and
-              patterns.
+            <div class="body-1">
+              Software engineer with passion for Javascript. Always try to
+              improve and keep up with the fast growing industry of web
+              development, while following the best practices and writing clean
+              and maintainable code.
             </div>
 
-            <div class="text-h6 mb-5">Employment</div>
-
-            <ul class="body-1 mb-10">
-              <li class="mb-2">
-                <a href="https://codefactory.gr/" target="_blank">CodeFactory</a
-                >, June 2019 - Present
-                <span class="body-2">({{ timeInCf }})</span>
-                <div class="body-1 pt-2">
-                  As a front-end developer I was creating interfaces with Vue.js
-                  following the best practices. Used modern features like push
-                  notifications, WebRTC and more. Converted web applications
-                  into hybrid mobile applications using Capacitor.js and
-                  published to both Google Play Store and Apple App Store. I
-                  consumed a variety of RESTful APIs as well as implemented some
-                  with Node.js and Express.js.
-                </div>
-              </li>
-            </ul>
-
-            <div class="text-h6 mb-5">Education</div>
-
-            <ul class="body-1 mb-10">
-              <li class="mb-2">
-                <a
-                  href="https://michiganassessment.org/michigan-tests/ecpe-details/"
-                  target="_blank"
-                  >Certificate of Proficiency in English (ECPE)</a
-                >,
-                <span class="font-weight-medium">University of Michigan</span>
-              </li>
-
-              <li>
-                <a href="http://www.ice.uniwa.gr/en/home/" target="_blank"
-                  >Department of Informatics and Computer Engineering</a
-                >,
-                <span class="font-weight-medium">University of West Attica</span
-                >, (2014)
-              </li>
-            </ul>
+            <v-divider class="my-5"></v-divider>
 
             <div class="text-h6 mb-5">Core Skills</div>
 
@@ -143,9 +118,9 @@
               >
             </div>
 
-            <div class="text-h6 mb-5">Other Major Technologies</div>
+            <div class="text-h6 mb-5">Other Technologies</div>
 
-            <div class="mb-10">
+            <div>
               <v-chip
                 v-for="technology in technologies"
                 :key="technology.name"
@@ -159,14 +134,57 @@
               >
             </div>
 
+            <v-divider class="my-5"></v-divider>
+
+            <div class="text-h6 mb-5">Professional Experience</div>
+
+            <ul class="body-1">
+              <li class="mb-2">
+                <a href="https://codefactory.gr/" target="_blank">CodeFactory</a
+                >, June 2019 - Present
+                <span class="body-2">({{ timeInCf }})</span>
+                <div class="body-1 pt-2">
+                  Created web and mobile interfaces with Vue.js. Converted web
+                  applications into mobile applications using Capacitor.js.
+                  Created RESTful APIs with Node.js and Express.js as well as
+                  involved in the proccess of deploying to productions servers
+                  and mobile stores. Started many projects from scratch.
+                </div>
+              </li>
+            </ul>
+
+            <v-divider class="my-5"></v-divider>
+
+            <div class="text-h6 mb-5">Education</div>
+
+            <ul class="body-1">
+              <li class="mb-2">
+                <a href="http://www.ice.uniwa.gr/en/home/" target="_blank"
+                  >Department of Informatics and Computer Engineering</a
+                >,
+                <span class="font-weight-medium"
+                  >University of West Attica</span
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://michiganassessment.org/michigan-tests/ecpe-details/"
+                  target="_blank"
+                  >Certificate of Proficiency in English (ECPE)</a
+                >,
+                <span class="font-weight-medium">University of Michigan</span>
+              </li>
+            </ul>
+
+            <v-divider class="my-5"></v-divider>
+
             <div class="text-h6 mb-5">Hobbies</div>
 
             <ul class="body-1">
               <li class="mb-2">Guitar</li>
 
               <li class="mb-2">Fitness</li>
-
-              <li class="mb-2">Watching/playing football</li>
             </ul>
           </div>
 
@@ -203,18 +221,13 @@ export default {
           isWhite: false,
         },
         {
-          name: 'Vue.js',
-          color: '#42b883',
-          isWhite: true,
-        },
-        {
-          name: 'CSS',
+          name: 'CSS / SCSS',
           color: '#2965f1',
           isWhite: true,
         },
         {
-          name: 'Nuxt.js',
-          color: '#00c58e',
+          name: 'Vue.js',
+          color: '#42b883',
           isWhite: true,
         },
         {
@@ -232,8 +245,18 @@ export default {
           color: '#f29111',
           isWhite: true,
         },
+        {
+          name: 'Git',
+          color: '#F1502F',
+          isWhite: true,
+        },
       ],
       technologies: [
+        {
+          name: 'Typescript',
+          color: '#007acc',
+          isWhite: true,
+        },
         {
           name: 'Vuetify.js',
           color: '#1697f6',
@@ -245,18 +268,8 @@ export default {
           isWhite: true,
         },
         {
-          name: 'PWA',
-          color: '#5a0fc8',
-          isWhite: true,
-        },
-        {
-          name: 'Sequelize ORM',
-          color: '#237bbb',
-          isWhite: true,
-        },
-        {
-          name: 'Prisma ORM',
-          color: '#48bb78',
+          name: 'Nuxt.js',
+          color: '#00c58e',
           isWhite: true,
         },
         {
@@ -265,20 +278,40 @@ export default {
           isWhite: false,
         },
         {
-          name: 'Twilio video js',
-          color: '#f22f46',
+          name: 'WSL2',
+          color: '#00a1f1',
           isWhite: true,
         },
-        // {
-        //   name: 'Stripe payments',
-        //   color: '#635bff',
-        //   isWhite: true,
-        // },
-        // {
-        //   name: 'Paypal',
-        //   color: '#222d65',
-        //   isWhite: true,
-        // },
+        {
+          name: 'Ubuntu',
+          color: '#dd4814 ',
+          isWhite: true,
+        },
+        {
+          name: 'NGINX',
+          color: '#009900 ',
+          isWhite: true,
+        },
+        {
+          name: 'Redis',
+          color: '#d82c20 ',
+          isWhite: true,
+        },
+        {
+          name: 'Docker',
+          color: '#0db7ed ',
+          isWhite: true,
+        },
+        {
+          name: 'Jenkins',
+          color: '#D33834 ',
+          isWhite: true,
+        },
+        {
+          name: 'Jest',
+          color: '#e49c84 ',
+          isWhite: true,
+        },
       ],
     }
   },
