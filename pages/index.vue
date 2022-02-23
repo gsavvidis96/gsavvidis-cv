@@ -78,7 +78,7 @@
                 depressed
                 color="accent"
                 class="accentTextColor--text"
-                href="cv.pdf"
+                href="GiannisSavvidisCV.pdf"
                 download
               >
                 <v-icon left>mdi-cloud-download-outline</v-icon>
@@ -146,9 +146,9 @@
                 <div class="body-1 pt-2">
                   Created web and mobile interfaces with Vue.js. Converted web
                   applications into mobile applications using Capacitor.js.
-                  Created RESTful APIs with Node.js and Express.js as well as
-                  involved in the process of deploying to production servers and
-                  mobile stores. Started many projects from scratch.
+                  Created RESTful APIs with Node.js and Express.js. Involved in
+                  the process of deploying to production servers and mobile
+                  stores. Started many projects from scratch.
                 </div>
               </li>
             </ul>
