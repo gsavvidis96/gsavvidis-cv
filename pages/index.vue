@@ -241,7 +241,7 @@ export default {
           isWhite: true,
         },
         {
-          name: 'MySQL/PostgreSQL',
+          name: 'MySQL / PostgreSQL',
           color: '#f29111',
           isWhite: true,
         },
