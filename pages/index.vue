@@ -94,7 +94,7 @@
             <div class="text-h6 mb-5">Summary</div>
 
             <div class="body-1">
-              Software engineer with passion for Javascript. Always try to
+              Software engineer with a passion for Javascript. Always try to
               improve and keep up with the fast growing industry of web
               development, while following the best practices and writing clean
               and maintainable code.
@@ -147,8 +147,8 @@
                   Created web and mobile interfaces with Vue.js. Converted web
                   applications into mobile applications using Capacitor.js.
                   Created RESTful APIs with Node.js and Express.js as well as
-                  involved in the proccess of deploying to productions servers
-                  and mobile stores. Started many projects from scratch.
+                  involved in the process of deploying to production servers and
+                  mobile stores. Started many projects from scratch.
                 </div>
               </li>
             </ul>
