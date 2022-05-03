@@ -208,12 +208,12 @@ export default {
       currentYear: new Date().getFullYear(),
       skills: [
         {
-          name: 'Javascript',
+          name: 'JavaScript',
           color: '#f7df1e',
           isWhite: false,
         },
         {
-          name: 'Typescript',
+          name: 'TypeScript',
           color: '#007acc',
           isWhite: true,
         },
