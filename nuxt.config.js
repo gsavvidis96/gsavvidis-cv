@@ -84,4 +84,7 @@ export default {
   generate: {
     fallback: true
   },
+  server: {
+    port: 3005,
+  }
 }

@@ -28,7 +28,7 @@
           <div class="pa-5 text-center text-md-start">
             <div class="text-h5 mb-1 font-weight-bold">Giannis Savvidis</div>
 
-            <div class="body-1">Software engineer</div>
+            <div class="body-1">Software Developer</div>
           </div>
 
           <v-divider></v-divider>
@@ -94,8 +94,8 @@
             <div class="text-h6 mb-5">Summary</div>
 
             <div class="body-1">
-              Software engineer with a passion for Javascript. Always try to
-              improve and keep up with the fast growing industry of web
+              Software developer based in Athens, Greece. Always try to improve
+              and keep up with the fast growing industry of software
               development, while following the best practices and writing clean
               and maintainable code.
             </div>
@@ -104,32 +104,24 @@
 
             <div class="text-h6 mb-5">Core Skills</div>
 
-            <div class="mb-10">
+            <div class="mb-8">
               <v-chip
                 v-for="skill in skills"
                 :key="skill.name"
                 class="ma-2"
-                :color="skill.color"
-                :class="{
-                  'white--text': skill.isWhite,
-                  'black--text': !skill.isWhite,
-                }"
+                outlined
                 >{{ skill.name }}</v-chip
               >
             </div>
 
-            <div class="text-h6 mb-5">Other Technologies</div>
+            <div class="text-h6 mb-5">Familiar With</div>
 
             <div>
               <v-chip
-                v-for="technology in technologies"
+                v-for="technology in familiarWith"
                 :key="technology.name"
                 class="ma-2"
-                :color="technology.color"
-                :class="{
-                  'white--text': technology.isWhite,
-                  'black--text': !technology.isWhite,
-                }"
+                outlined
                 >{{ technology.name }}</v-chip
               >
             </div>
@@ -221,13 +213,23 @@ export default {
           isWhite: false,
         },
         {
+          name: 'Typescript',
+          color: '#007acc',
+          isWhite: true,
+        },
+        {
           name: 'CSS / SCSS',
           color: '#2965f1',
           isWhite: true,
         },
         {
-          name: 'Vue.js',
+          name: 'Vue.js (2 & 3)',
           color: '#42b883',
+          isWhite: true,
+        },
+        {
+          name: 'Capacitor.js',
+          color: '#119eff',
           isWhite: true,
         },
         {
@@ -241,55 +243,13 @@ export default {
           isWhite: true,
         },
         {
-          name: 'MySQL / PostgreSQL',
-          color: '#f29111',
+          name: 'Nest.js',
+          color: '#ed1543',
           isWhite: true,
         },
         {
-          name: 'Git',
-          color: '#F1502F',
-          isWhite: true,
-        },
-      ],
-      technologies: [
-        {
-          name: 'Typescript',
-          color: '#007acc',
-          isWhite: true,
-        },
-        {
-          name: 'Vuetify.js',
-          color: '#1697f6',
-          isWhite: true,
-        },
-        {
-          name: 'Capacitor.js',
-          color: '#119eff',
-          isWhite: true,
-        },
-        {
-          name: 'Nuxt.js',
-          color: '#00c58e',
-          isWhite: true,
-        },
-        {
-          name: 'Firebase',
-          color: '#ffca28',
-          isWhite: false,
-        },
-        {
-          name: 'WSL2',
-          color: '#00a1f1',
-          isWhite: true,
-        },
-        {
-          name: 'Ubuntu',
-          color: '#dd4814 ',
-          isWhite: true,
-        },
-        {
-          name: 'NGINX',
-          color: '#009900 ',
+          name: 'PostgreSQL',
+          color: '#336791',
           isWhite: true,
         },
         {
@@ -303,13 +263,35 @@ export default {
           isWhite: true,
         },
         {
-          name: 'Jenkins',
-          color: '#D33834 ',
+          name: 'Jest',
+          color: '#e49c84 ',
+          isWhite: true,
+        },
+      ],
+      familiarWith: [
+        {
+          name: 'React.js',
+          color: '#61dafb',
+          isWhite: false,
+        },
+        {
+          name: 'MongoDB',
+          color: '#13aa52',
           isWhite: true,
         },
         {
-          name: 'Jest',
-          color: '#e49c84 ',
+          name: 'Kubernetes',
+          color: '#3371e3',
+          isWhite: true,
+        },
+        {
+          name: 'Microservices',
+          color: '#aeaeae',
+          isWhite: true,
+        },
+        {
+          name: 'CI / CD',
+          color: '#aeaeae',
           isWhite: true,
         },
       ],
@@ -333,9 +315,33 @@ export default {
       return this.$vuetify.theme.dark
     },
   },
+  beforeMount() {
+    if (!localStorage.getItem('isDarkMode')) {
+      // if not exists
+      if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        localStorage.setItem('isDarkMode', 'yes')
+      } else {
+        localStorage.setItem('isDarkMode', 'no')
+      }
+    }
+
+    const isDarkMode = localStorage.getItem('isDarkMode') // get last saved dark mode
+
+    setTimeout(() => {
+      this.$vuetify.theme.dark = isDarkMode === 'yes'
+    }, 1)
+  },
   methods: {
     toggleDarkMode() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark
+
+      localStorage.setItem(
+        'isDarkMode',
+        this.$vuetify.theme.dark ? 'yes' : 'no'
+      )
     },
   },
 }
